@@ -9,7 +9,7 @@ class Button extends React.Component {
 class ClickCounter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {counter: 0};
+    this.state = {counter: this.props.beginWith};
     this.count = this.count.bind(this);
   }
   
@@ -25,9 +25,9 @@ class ClickCounter extends React.Component {
 class Content extends React.Component {
   render() {
     return (
-    	<div>
-    	  <ClickCounter />
-    	</div>
+      <div>
+        <ClickCounter beginWith={1} />
+      </div>
     )
   }
 }
